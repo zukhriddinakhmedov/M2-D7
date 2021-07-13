@@ -528,9 +528,17 @@
 
        const removeOl = function(){
          const ol = document.querySelector(".blog-sidebar > div:last-of-type ol")
-         ol.innerHTML = "Hi"
+         ol.innerHTML = ""
        }
        removeOl()
+
+      const changeColSize = function (){
+        const cols = document.querySelectorAll(".jumbotron + div .col-md-6")
+        cols.forEach ((col) =>{
+          col.className = "col-md-4"
+        })
+      }
+      changeColSize()
     
       </script>
   </body>
