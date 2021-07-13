@@ -512,12 +512,19 @@
       parent.innerHTML += a
     }
     addNewLink("new link")
-    
+
     const changeTitleColor = function(){
       const title = document.querySelector(".jumbotron h1")
       title.style.color = "purple"
     }
     changeTitleColor()
+
+      const changeJumbotrongBg = function(){
+        const jumbotron = document.querySelector(".jumbotron")
+        jumbotron.classList.remove("bg-dark")
+        jumbotron.classList.remove("text-white")
+      }
+      changeJumbotrongBg()
     
       </script>
   </body>
