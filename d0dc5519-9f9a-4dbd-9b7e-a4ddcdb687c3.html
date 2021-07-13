@@ -54,8 +54,8 @@
             }
             /*
             EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives )*/
-            aside > .p-4:nth-of-type(2) {
-              background-color: red!important;
+            main .blog-sidebar div:nth-child(2) > ol > li {
+            
             }
             /*
             EX8) Write a selector to target the second post author*/
@@ -506,21 +506,19 @@
         EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
         EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
     */
-   
-    function newLink(){
-      let a = document.createElement('a')
-      let link = document.createTextNode("This is the new link")
-      let nav = document.querySelector('nav')
-      nav.appendChild(a)
-      //parent.appendChild(child)
-      //a.innerText = 'This is the new link'
-      a.appendChild(link)
-      a.title = "This is the new link"
-      a.href = "https://strive.school"
-      
-      
-      
+    const addNewLink = function (content){
+      const parent = document.querySelector(".nav")
+      const a = `<a class="p-2 text-muted" href="https://strive.school/">${content}</a>`
+      parent.innerHTML += a
     }
-    </script>
+    addNewLink("new link")
+    
+    const changeTitleColor = function(){
+      const title = document.querySelector(".jumbotron h1")
+      title.style.color = "purple"
+    }
+    changeTitleColor()
+    
+      </script>
   </body>
 </html>
