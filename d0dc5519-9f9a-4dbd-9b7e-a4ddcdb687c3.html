@@ -546,6 +546,24 @@
       }
       removeSearch()
 
+      const addNewPost = function(){
+        const btn =  document.querySelectorAll(".blog-pagination a")[1]
+        btn.classList.remove("disabled")
+        btn.removeAttribute("href")
+        btn.addEventListener("click", function () {
+          const blog = `<div class="blog-post">
+            <h2 class="blog-post-title">New feature</h2>
+            
+            </div>`
+            const blogMain = document.querySelector(".blog-main")
+            blogMain.innerHTML += blog 
+
+        })
+      }
+      addNewPost()
+
+
+
 
     
       </script>
